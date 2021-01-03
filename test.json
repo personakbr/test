@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  
-  "address" : "lenina, 123"
-=======
+"address" : "lenina, 123"
 "firstName": "Ivan",
 "lastname": "Ivanov"
->>>>>>> main
 }
