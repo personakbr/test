@@ -10,9 +10,79 @@ namespace testC2
 {
     class Program
     {
-        static void Main(string[] args)
+       
+                static void Main(string[] args)
         {
-            /*
+            int[] arrVector  = { 4, 6,  89, 5, -5, -3};
+            int[] arrVector2 = { 4, 6, 89 };
+           
+            Vector a1 = new Vector (arrVector);
+            Vector a2 = new Vector (arrVector2);
+           
+            Vector.Print(a1);
+            Console.WriteLine();
+            Vector.Print(a2);
+
+            Vector.RemoveFerst(ref a2);
+            Vector.Print(a2);
+
+            Vector.Print(a1);
+            Vector.RemovePositive(ref a1);
+            Vector.Print(a1);
+
+            Vector a3 = a1 + a2;
+            Console.WriteLine("Сумма Векторов: ");
+            Vector.Print(a3);
+
+            Console.WriteLine("maxValue: ");
+            MathOperation.maxValue(a2);
+
+            Console.WriteLine("minValue:");
+            MathOperation.minValue(a2);
+
+            Console.WriteLine("countValue:");
+            MathOperation.countValue(a2);
+
+            Vector.Owner owner = new Vector.Owner();
+            owner.printOwner();
+
+            Vector.Date date = new Vector.Date();
+            date.PrintDate();
+
+            bool result = a1 > a2;
+            Console.WriteLine(result);
+            bool a5 = a1 == a2;
+            Console.WriteLine(a5);
+
+            if (a1)
+                Console.WriteLine("Объект " + a1 + " не пустой");
+            else
+                Console.WriteLine("Объект " + a1 + " пустой");
+            Console.WriteLine();
+
+            Airline Air = new Airline();
+            Console.WriteLine("Выбирите город назначения из списка: \nNewYork: 1 \nParis: 2 \nMoscow: 3 \nLondon: 4 \nPrague 5 \nMinsk: 6");
+            int key = int.Parse(Console.ReadLine());
+            if (key <=6)
+            {
+                Air.listDestination(key);
+            }
+            else
+            {
+                Console.WriteLine("Введенно неправильное значение!");
+            }
+            Console.WriteLine("Выбирите день недели из списка: \nMonday: 1 \nTuesday: 2 \nWednesday: 3 \nThursday: 4 \nFriday 5 \nSaturday: 6 \nSunday: 7");
+            int key2 = int.Parse(Console.ReadLine());
+            if (key2 <= 7)
+            {
+                Air.listDay(key2);
+            }
+            else
+            {
+                Console.WriteLine("Введенно неправильное значение!");
+            }
+
+            /*ЛР 1
             //примитивные типы данных
             
             byte bit = 1; // 0 / 255 
